@@ -44,15 +44,17 @@ The application enforces data query boundaries at the database routing level usi
 
 ---
 
+```text
 [Client Browser]                                         [Express Backend]
 Local Storage Tampering
 
-│                                                              │
-│ ─── GET /api/metrics (with original signed JWT) ───────────> │
-│                                                              │ ──> Verify Cryptographic Signature
-│                                                              │ ──> Payload Claim Evaluated
-│                                                              │ ──> Formulates Strict Database Query
-│ <── Returns Authorized Scope Data Records Only ────────────── │
+│                                                               │
+│ ─── GET /api/metrics (with original signed JWT) ───────────>  │
+│                                                               │ ──> Verify Cryptographic Signature
+│                                                               │ ──> Payload Claim Evaluated
+│                                                               │ ──> Formulates Strict Database Query
+│ <── Returns Authorized Scope Data Records Only ─────────────> │
+```
 
 
 * **Root Administrator (`Admin`):** Full execution space visibility. Grants read/write access to system logs, audit trails, and data schema updates.
