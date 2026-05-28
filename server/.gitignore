@@ -1,0 +1,6 @@
+# Block sensitive environment keys
+.env
+.env.local
+
+# Block heavy dependency trees
+node_modules/
